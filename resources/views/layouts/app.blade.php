@@ -6,13 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'ipLivewire') }}</title>
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+
+    <style>
+        [x-cloak] {
+            display: none !important;
+        }
+
+    </style>
 
     @livewireStyles
 
@@ -27,13 +36,13 @@
 
         <div class="flex w-full h-full overflow-hidden antialiased text-gray-800 bg-white">
 
-            @include('components.navigation.sidebar')
+            @include('navigation.sidebar')
 
             <div class="flex flex-col flex-1">
 
                 {{-- <livewire:nav.menu /> --}}
 
-                @include('livewire.nav.top')
+                @include('navigation.top')
                 <!-- Content Container -->
                 <main class="flex-1 border-t bg-gray-50" tabindex="0" x-init="$el.focus()">
                     <div>
