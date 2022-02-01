@@ -10,4 +10,9 @@ class ActorController extends Controller
     {
         return view('actor.index');
     }
+
+    public function edit()
+    {
+        return view('dashboard');
+    }
 }

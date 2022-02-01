@@ -16,6 +16,7 @@
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
         "livewire/livewire": "^2.5",
+        "nesbot/carbon": "^2.56",
         "power-components/livewire-powergrid": "^2.2"
     },
     "require-dev": {

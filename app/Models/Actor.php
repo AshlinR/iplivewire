@@ -11,6 +11,7 @@ class Actor extends Model
 
     protected $hidden = ['login', 'last_login', 'password', 'remember_token', 'creator', 'created_at', 'updated_at', 'updater'];
     protected $guarded = ['id', 'password', 'created_at', 'updated_at'];
+    protected $fillable = ['name', 'first_name', 'last_name', 'middle_name',  'created_at', 'updated_at'];
 
     // Relations
     // public function matters()
@@ -25,8 +26,8 @@ class Actor extends Model
     // {
     //     return $this->belongsToMany(Jurisdiction::class);
     // }
-    // public function classifiers()
-    // {
-    //     return $this->hasMany(Classifier::class);
-    // }
+    public function classifiers()
+    {
+        return $this->hasMany(Classifier::class);
+    }
 }
