@@ -24,6 +24,9 @@
     </style>
 
     @livewireStyles
+     @powerGridStyles
+
+
 
     <!-- Scripts -->
     <script src="{{ mix('js/app.js') }}" defer></script>
@@ -68,6 +71,8 @@
 
 
     @stack('modals')
+    @powerGridScripts
+
 
     @livewireScripts
 </body>
